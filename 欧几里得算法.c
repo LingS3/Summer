@@ -1,19 +1,19 @@
-/*Å·¼¸ÀïµÂËã·¨ÓÖ³ÆÕ·×ªÏà³ý·¨£¬ÊÇÖ¸ÓÃÓÚ¼ÆËãÁ½¸öÕýÕûÊýa£¬bµÄ×î´ó¹«Ô¼Êý¡£
-¼ÆËã¹«Ê½gcd(a,b) = gcd(b,a mod b)¡£*/
+/*æ¬§å‡ é‡Œå¾·ç®—æ³•åˆç§°è¾—è½¬ç›¸é™¤æ³•ï¼Œæ˜¯æŒ‡ç”¨äºŽè®¡ç®—ä¸¤ä¸ªæ­£æ•´æ•°aï¼Œbçš„æœ€å¤§å…¬çº¦æ•°ã€‚
+è®¡ç®—å…¬å¼gcd(a,b) = gcd(b,a mod b)ã€‚*/
 #include<stdio.h>
 int main()
 {
     int a,b,c,i;
     c=1;
-    printf("ÇëÊäÈë´ýÇó¹«Ô¼ÊýµÄÁ½¸öÊý:");
+    printf("è¯·è¾“å…¥å¾…æ±‚å…¬çº¦æ•°çš„ä¸¤ä¸ªæ•°:");
     scanf("%d %d",&a,&b);
-    while(c!=0){
-        i=a/b;
-        c=a-b*i;
+    while(c!=0)
+    {
+        c=a%b;
         a=b;
         b=c;
     }
-    printf("×î´ó¹«Ô¼ÊýÎª:%d",a);
+    printf("æœ€å¤§å…¬çº¦æ•°ä¸º:%d",a);
     return 0;
 }
-//×î¿ªÊ¼µÄ³ýÊý±ä±»³ýÊý£¬ÓàÊý±ä³ýÊý£¬Í¨¹ýÅÐ¶ÏÓàÊýÊÇ·ñÎª0À´Êä³ö×î´ó¹«Ô¼Êý
+//æœ€å¼€å§‹çš„é™¤æ•°å˜è¢«é™¤æ•°ï¼Œä½™æ•°å˜é™¤æ•°ï¼Œé€šè¿‡åˆ¤æ–­ä½™æ•°æ˜¯å¦ä¸º0æ¥è¾“å‡ºæœ€å¤§å…¬çº¦æ•°
